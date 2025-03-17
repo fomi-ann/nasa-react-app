@@ -34,7 +34,6 @@ function App() {
         localStorage.setItem(localKey, JSON.stringify(apiData))
         setData(apiData)
         console.log('Fetched from API today')
-      
       } catch (err) {
         console.log(err.message)
       }
@@ -45,10 +44,11 @@ function App() {
 
   return (
     <>
-      {data ? (<Main data={data} />):
+      {data ? (<Main data={data} />) : (
         <div className="loadingState">
             <i className="fa-solid fa-gear"></i>
-        </div>}
+        </div>
+      )}
       {showModal && (
         <SideBar data={data} handleToggleModal={handleToggleModal} />
         )}
