@@ -16,7 +16,6 @@ function App() {
     async function fetchAPIData() {
       const NASA_KEY = import.meta.env.VITE_NASA_API_KEY
       const url = 'https://api.nasa.gov/planetary/apod' + `?api_key=${NASA_KEY}`
-      console.log("Netlify API Key:", import.meta.env.VITE_NASA_API_KEY);
 
 
       const today = (new Date()).toDateString()
