@@ -29,7 +29,7 @@ function App() {
       localStorage.clear()
  
       try {
-        const res = await fetch(url, {cache: "no-storage"})
+        const res = await fetch(url, { cache: "reload" })
         const apiData = await res.json()
         localStorage.setItem(localKey, JSON.stringify(apiData))
         setData(apiData)
